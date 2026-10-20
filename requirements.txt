@@ -1,0 +1,3 @@
+anthropic>=0.40
+# optional: only for the Seed evolving (Volcengine Ark) proxy
+# litellm[proxy]

@@ -1,0 +1,2134 @@
+{
+ "overall": {
+  "n_attempts": 2160,
+  "completeness": 0.3221,
+  "richness": 0.3354,
+  "gate_fail_rate": 0.2102
+ },
+ "leaderboard": [
+  {
+   "model": "codex_gpt_6_astra",
+   "model_name": "GPT-6 Astra",
+   "n_attempts": 180,
+   "completeness": 0.5713,
+   "richness": 0.4931,
+   "gate_fail_rate": 0.1333,
+   "C1": 0.5809,
+   "C2": 0.4671,
+   "C3": 0.5833,
+   "C4": 0.5522,
+   "C5": 0.5248,
+   "C6": 0.5109,
+   "C7": 0.5765,
+   "C8": 0.5402,
+   "rank": 1
+  },
+  {
+   "model": "cc_fable_5_1",
+   "model_name": "Fable 5.1 xhigh",
+   "n_attempts": 180,
+   "completeness": 0.4472,
+   "richness": 0.4069,
+   "gate_fail_rate": 0.1778,
+   "C1": 0.4393,
+   "C2": 0.4013,
+   "C3": 0.4659,
+   "C4": 0.393,
+   "C5": 0.4587,
+   "C6": 0.4293,
+   "C7": 0.4118,
+   "C8": 0.431,
+   "rank": 2
+  },
+  {
+   "model": "cc_fable_5",
+   "model_name": "Fable 5",
+   "n_attempts": 180,
+   "completeness": 0.3898,
+   "richness": 0.3931,
+   "gate_fail_rate": 0.2111,
+   "C1": 0.4104,
+   "C2": 0.352,
+   "C3": 0.447,
+   "C4": 0.408,
+   "C5": 0.3512,
+   "C6": 0.3641,
+   "C7": 0.3647,
+   "C8": 0.4138,
+   "rank": 3
+  },
+  {
+   "model": "cc_opus_5",
+   "model_name": "Opus 5",
+   "n_attempts": 180,
+   "completeness": 0.3722,
+   "richness": 0.4042,
+   "gate_fail_rate": 0.1611,
+   "C1": 0.4509,
+   "C2": 0.3257,
+   "C3": 0.4091,
+   "C4": 0.3035,
+   "C5": 0.4132,
+   "C6": 0.4076,
+   "C7": 0.2941,
+   "C8": 0.3966,
+   "rank": 4
+  },
+  {
+   "model": "codex_gpt_5_6_sol",
+   "model_name": "GPT-5.6-sol",
+   "n_attempts": 180,
+   "completeness": 0.3343,
+   "richness": 0.3264,
+   "gate_fail_rate": 0.1667,
+   "C1": 0.4046,
+   "C2": 0.2763,
+   "C3": 0.375,
+   "C4": 0.2886,
+   "C5": 0.343,
+   "C6": 0.2772,
+   "C7": 0.2706,
+   "C8": 0.3333,
+   "rank": 5
+  },
+  {
+   "model": "cc_glm_5_3",
+   "model_name": "GLM-5.3",
+   "n_attempts": 180,
+   "completeness": 0.3111,
+   "richness": 0.3403,
+   "gate_fail_rate": 0.2167,
+   "C1": 0.3468,
+   "C2": 0.2599,
+   "C3": 0.375,
+   "C4": 0.2836,
+   "C5": 0.3306,
+   "C6": 0.3424,
+   "C7": 0.2471,
+   "C8": 0.3563,
+   "rank": 6
+  },
+  {
+   "model": "codex_gpt_5_5",
+   "model_name": "GPT-5.5",
+   "n_attempts": 180,
+   "completeness": 0.2694,
+   "richness": 0.2833,
+   "gate_fail_rate": 0.1556,
+   "C1": 0.3266,
+   "C2": 0.2007,
+   "C3": 0.3598,
+   "C4": 0.2587,
+   "C5": 0.2603,
+   "C6": 0.2663,
+   "C7": 0.2588,
+   "C8": 0.2299,
+   "rank": 7
+  },
+  {
+   "model": "cc_deepseek_flash_41",
+   "model_name": "DeepSeek-V4.1-Flash",
+   "n_attempts": 180,
+   "completeness": 0.2593,
+   "richness": 0.2889,
+   "gate_fail_rate": 0.2056,
+   "C1": 0.3266,
+   "C2": 0.2007,
+   "C3": 0.3447,
+   "C4": 0.2338,
+   "C5": 0.2149,
+   "C6": 0.2772,
+   "C7": 0.2118,
+   "C8": 0.3161,
+   "rank": 8
+  },
+  {
+   "model": "cc_glm_5_2",
+   "model_name": "GLM-5.2",
+   "n_attempts": 180,
+   "completeness": 0.2426,
+   "richness": 0.2806,
+   "gate_fail_rate": 0.2667,
+   "C1": 0.3179,
+   "C2": 0.2138,
+   "C3": 0.322,
+   "C4": 0.2289,
+   "C5": 0.2314,
+   "C6": 0.2663,
+   "C7": 0.1294,
+   "C8": 0.2414,
+   "rank": 9
+  },
+  {
+   "model": "cc_deepseek_v4_flash",
+   "model_name": "DeepSeek-V4-Flash-0731",
+   "n_attempts": 180,
+   "completeness": 0.2352,
+   "richness": 0.2847,
+   "gate_fail_rate": 0.2667,
+   "C1": 0.3237,
+   "C2": 0.2072,
+   "C3": 0.25,
+   "C4": 0.2338,
+   "C5": 0.2562,
+   "C6": 0.2717,
+   "C7": 0.1529,
+   "C8": 0.2644,
+   "rank": 10
+  },
+  {
+   "model": "codex_deepseek_v4_pro",
+   "model_name": "DeepSeek-V4-Pro",
+   "n_attempts": 180,
+   "completeness": 0.2222,
+   "richness": 0.275,
+   "gate_fail_rate": 0.2278,
+   "C1": 0.2746,
+   "C2": 0.1941,
+   "C3": 0.2879,
+   "C4": 0.2488,
+   "C5": 0.2603,
+   "C6": 0.1739,
+   "C7": 0.2,
+   "C8": 0.2644,
+   "rank": 11
+  },
+  {
+   "model": "cc_seed_evolving",
+   "model_name": "Seed Evolving V4",
+   "n_attempts": 180,
+   "completeness": 0.2102,
+   "richness": 0.2486,
+   "gate_fail_rate": 0.3333,
+   "C1": 0.2803,
+   "C2": 0.1875,
+   "C3": 0.2841,
+   "C4": 0.2189,
+   "C5": 0.219,
+   "C6": 0.1576,
+   "C7": 0.0824,
+   "C8": 0.2529,
+   "rank": 12
+  }
+ ],
+ "capabilities": {
+  "C1": "Core Rules",
+  "C2": "AI / NPC",
+  "C3": "Numerical Design",
+  "C4": "Interaction & Input",
+  "C5": "Levels & Scenes",
+  "C6": "Animation & Rendering",
+  "C7": "Feedback & Game Feel",
+  "C8": "Guidance & Meta-UI"
+ },
+ "by_track": {
+  "cc_deepseek_flash_41": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.6333,
+    "richness": 0.75,
+    "gate_fail_rate": 0.1
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.2078,
+    "richness": 0.2317,
+    "gate_fail_rate": 0.2267
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.4583,
+    "richness": 0.4875,
+    "gate_fail_rate": 0.1
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.5667,
+    "richness": 0.6,
+    "gate_fail_rate": 0.1
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.1733,
+    "richness": 0.2333,
+    "gate_fail_rate": 0.3067
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.5333,
+    "richness": 0.5125,
+    "gate_fail_rate": 0.05
+   }
+  },
+  "cc_fable_5": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.7333,
+    "richness": 0.825,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.3444,
+    "richness": 0.3467,
+    "gate_fail_rate": 0.2267
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.5583,
+    "richness": 0.525,
+    "gate_fail_rate": 0.2
+   }
+  },
+  "cc_fable_5_1": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.75,
+    "richness": 0.9,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.4078,
+    "richness": 0.3567,
+    "gate_fail_rate": 0.1933
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.5917,
+    "richness": 0.5375,
+    "gate_fail_rate": 0.15
+   }
+  },
+  "cc_glm_5_2": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.6667,
+    "richness": 0.7,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.1889,
+    "richness": 0.2267,
+    "gate_fail_rate": 0.2867
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.4333,
+    "richness": 0.475,
+    "gate_fail_rate": 0.25
+   }
+  },
+  "cc_glm_5_3": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.5333,
+    "richness": 0.625,
+    "gate_fail_rate": 0.1
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.2678,
+    "richness": 0.3017,
+    "gate_fail_rate": 0.2333
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.525,
+    "richness": 0.4875,
+    "gate_fail_rate": 0.15
+   }
+  },
+  "cc_opus_5": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.7333,
+    "richness": 0.825,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.32,
+    "richness": 0.3517,
+    "gate_fail_rate": 0.1867
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.5833,
+    "richness": 0.5875,
+    "gate_fail_rate": 0.05
+   }
+  },
+  "cc_seed_evolving": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.5333,
+    "richness": 0.625,
+    "gate_fail_rate": 0.2
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.1633,
+    "richness": 0.2133,
+    "gate_fail_rate": 0.3533
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.4,
+    "richness": 0.325,
+    "gate_fail_rate": 0.25
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.5,
+    "richness": 0.65,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.1756,
+    "richness": 0.22,
+    "gate_fail_rate": 0.2533
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.4333,
+    "richness": 0.5,
+    "gate_fail_rate": 0.15
+   }
+  },
+  "codex_gpt_5_5": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.6333,
+    "richness": 0.625,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.2178,
+    "richness": 0.2483,
+    "gate_fail_rate": 0.18
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.475,
+    "richness": 0.375,
+    "gate_fail_rate": 0.05
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.6667,
+    "richness": 0.725,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.2911,
+    "richness": 0.285,
+    "gate_fail_rate": 0.1933
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.4917,
+    "richness": 0.4375,
+    "gate_fail_rate": 0.05
+   }
+  },
+  "codex_gpt_6_astra": {
+   "expert": {
+    "n_attempts": 10,
+    "completeness": 0.8667,
+    "richness": 0.875,
+    "gate_fail_rate": 0.0
+   },
+   "main": {
+    "n_attempts": 150,
+    "completeness": 0.5267,
+    "richness": 0.4467,
+    "gate_fail_rate": 0.16
+   },
+   "repro": {
+    "n_attempts": 20,
+    "completeness": 0.7583,
+    "richness": 0.65,
+    "gate_fail_rate": 0.0
+   }
+  }
+ },
+ "by_platform": {
+  "cc_deepseek_flash_41": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.3059,
+    "richness": 0.3824,
+    "gate_fail_rate": 0.1412
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.2175,
+    "richness": 0.2053,
+    "gate_fail_rate": 0.2632
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.2941,
+    "richness": 0.4265,
+    "gate_fail_rate": 0.1176
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.1825,
+    "richness": 0.1579,
+    "gate_fail_rate": 0.4
+   }
+  },
+  "cc_fable_5": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.4412,
+    "richness": 0.5,
+    "gate_fail_rate": 0.1529
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.3439,
+    "richness": 0.2974,
+    "gate_fail_rate": 0.2632
+   }
+  },
+  "cc_fable_5_1": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.5039,
+    "richness": 0.5059,
+    "gate_fail_rate": 0.1176
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.3965,
+    "richness": 0.3184,
+    "gate_fail_rate": 0.2316
+   }
+  },
+  "cc_glm_5_2": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.3039,
+    "richness": 0.3853,
+    "gate_fail_rate": 0.1529
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.1877,
+    "richness": 0.1868,
+    "gate_fail_rate": 0.3684
+   }
+  },
+  "cc_glm_5_3": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.3941,
+    "richness": 0.4735,
+    "gate_fail_rate": 0.1176
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.2368,
+    "richness": 0.2211,
+    "gate_fail_rate": 0.3053
+   }
+  },
+  "cc_opus_5": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.402,
+    "richness": 0.5,
+    "gate_fail_rate": 0.1059
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.3456,
+    "richness": 0.3184,
+    "gate_fail_rate": 0.2105
+   }
+  },
+  "cc_seed_evolving": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.2608,
+    "richness": 0.3441,
+    "gate_fail_rate": 0.2118
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.1649,
+    "richness": 0.1632,
+    "gate_fail_rate": 0.4421
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.2745,
+    "richness": 0.3735,
+    "gate_fail_rate": 0.1412
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.1754,
+    "richness": 0.1868,
+    "gate_fail_rate": 0.3053
+   }
+  },
+  "codex_gpt_5_5": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.2804,
+    "richness": 0.3735,
+    "gate_fail_rate": 0.1176
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.2597,
+    "richness": 0.2026,
+    "gate_fail_rate": 0.1895
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.4078,
+    "richness": 0.4382,
+    "gate_fail_rate": 0.1059
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.2684,
+    "richness": 0.2263,
+    "gate_fail_rate": 0.2211
+   }
+  },
+  "codex_gpt_6_astra": {
+   "mobile": {
+    "n_attempts": 85,
+    "completeness": 0.6412,
+    "richness": 0.5735,
+    "gate_fail_rate": 0.0941
+   },
+   "web": {
+    "n_attempts": 95,
+    "completeness": 0.5088,
+    "richness": 0.4211,
+    "gate_fail_rate": 0.1684
+   }
+  }
+ },
+ "by_render": {
+  "cc_deepseek_flash_41": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.3571,
+    "richness": 0.3764,
+    "gate_fail_rate": 0.011
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.1592,
+    "richness": 0.1994,
+    "gate_fail_rate": 0.4045
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.3297,
+    "richness": 0.3874,
+    "gate_fail_rate": 0.033
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.1386,
+    "richness": 0.1798,
+    "gate_fail_rate": 0.5056
+   }
+  },
+  "cc_fable_5": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.5037,
+    "richness": 0.467,
+    "gate_fail_rate": 0.022
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.2734,
+    "richness": 0.3174,
+    "gate_fail_rate": 0.4045
+   }
+  },
+  "cc_fable_5_1": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.5513,
+    "richness": 0.4753,
+    "gate_fail_rate": 0.022
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.3408,
+    "richness": 0.3371,
+    "gate_fail_rate": 0.3371
+   }
+  },
+  "cc_glm_5_2": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.359,
+    "richness": 0.3764,
+    "gate_fail_rate": 0.022
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.1236,
+    "richness": 0.1826,
+    "gate_fail_rate": 0.5169
+   }
+  },
+  "cc_glm_5_3": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.4212,
+    "richness": 0.4451,
+    "gate_fail_rate": 0.022
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.1985,
+    "richness": 0.2331,
+    "gate_fail_rate": 0.4157
+   }
+  },
+  "cc_opus_5": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.4451,
+    "richness": 0.4698,
+    "gate_fail_rate": 0.011
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.2978,
+    "richness": 0.3371,
+    "gate_fail_rate": 0.3146
+   }
+  },
+  "cc_seed_evolving": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.3095,
+    "richness": 0.3434,
+    "gate_fail_rate": 0.0879
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.1086,
+    "richness": 0.1517,
+    "gate_fail_rate": 0.5843
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.315,
+    "richness": 0.3544,
+    "gate_fail_rate": 0.033
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.1273,
+    "richness": 0.1938,
+    "gate_fail_rate": 0.427
+   }
+  },
+  "codex_gpt_5_5": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.3278,
+    "richness": 0.3626,
+    "gate_fail_rate": 0.022
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.2097,
+    "richness": 0.2022,
+    "gate_fail_rate": 0.2921
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.4414,
+    "richness": 0.4148,
+    "gate_fail_rate": 0.022
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.2247,
+    "richness": 0.236,
+    "gate_fail_rate": 0.3146
+   }
+  },
+  "codex_gpt_6_astra": {
+   "2d": {
+    "n_attempts": 91,
+    "completeness": 0.6886,
+    "richness": 0.5742,
+    "gate_fail_rate": 0.0
+   },
+   "3d": {
+    "n_attempts": 89,
+    "completeness": 0.4513,
+    "richness": 0.4101,
+    "gate_fail_rate": 0.2697
+   }
+  }
+ },
+ "by_level": {
+  "cc_deepseek_flash_41": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.2857,
+    "richness": 0.256,
+    "gate_fail_rate": 0.2381
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.2558,
+    "richness": 0.343,
+    "gate_fail_rate": 0.1163
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.2633,
+    "richness": 0.34,
+    "gate_fail_rate": 0.16
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2333,
+    "richness": 0.2111,
+    "gate_fail_rate": 0.3111
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.246,
+    "richness": 0.2679,
+    "gate_fail_rate": 0.2857
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.2481,
+    "richness": 0.2558,
+    "gate_fail_rate": 0.2093
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.25,
+    "richness": 0.33,
+    "gate_fail_rate": 0.22
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.1963,
+    "richness": 0.2778,
+    "gate_fail_rate": 0.3556
+   }
+  },
+  "cc_fable_5": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.4246,
+    "richness": 0.3929,
+    "gate_fail_rate": 0.1905
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.3721,
+    "richness": 0.3953,
+    "gate_fail_rate": 0.186
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.42,
+    "richness": 0.43,
+    "gate_fail_rate": 0.16
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.3407,
+    "richness": 0.35,
+    "gate_fail_rate": 0.3111
+   }
+  },
+  "cc_fable_5_1": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.4722,
+    "richness": 0.3571,
+    "gate_fail_rate": 0.1429
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.4612,
+    "richness": 0.436,
+    "gate_fail_rate": 0.1163
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.4767,
+    "richness": 0.45,
+    "gate_fail_rate": 0.16
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.3778,
+    "richness": 0.3778,
+    "gate_fail_rate": 0.2889
+   }
+  },
+  "cc_glm_5_2": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.2619,
+    "richness": 0.244,
+    "gate_fail_rate": 0.2619
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.2558,
+    "richness": 0.2965,
+    "gate_fail_rate": 0.2558
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.2433,
+    "richness": 0.35,
+    "gate_fail_rate": 0.16
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2111,
+    "richness": 0.2222,
+    "gate_fail_rate": 0.4
+   }
+  },
+  "cc_glm_5_3": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.3254,
+    "richness": 0.3512,
+    "gate_fail_rate": 0.1667
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.3256,
+    "richness": 0.3198,
+    "gate_fail_rate": 0.186
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.3233,
+    "richness": 0.365,
+    "gate_fail_rate": 0.18
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2704,
+    "richness": 0.3222,
+    "gate_fail_rate": 0.3333
+   }
+  },
+  "cc_opus_5": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.4087,
+    "richness": 0.369,
+    "gate_fail_rate": 0.1429
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.3954,
+    "richness": 0.436,
+    "gate_fail_rate": 0.1163
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.41,
+    "richness": 0.465,
+    "gate_fail_rate": 0.12
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2741,
+    "richness": 0.3389,
+    "gate_fail_rate": 0.2667
+   }
+  },
+  "cc_seed_evolving": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.2143,
+    "richness": 0.2381,
+    "gate_fail_rate": 0.2857
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.1822,
+    "richness": 0.25,
+    "gate_fail_rate": 0.4419
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.2267,
+    "richness": 0.26,
+    "gate_fail_rate": 0.26
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2148,
+    "richness": 0.2444,
+    "gate_fail_rate": 0.3556
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.2857,
+    "richness": 0.244,
+    "gate_fail_rate": 0.1905
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.1783,
+    "richness": 0.2442,
+    "gate_fail_rate": 0.2558
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.1967,
+    "richness": 0.31,
+    "gate_fail_rate": 0.16
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2333,
+    "richness": 0.2944,
+    "gate_fail_rate": 0.3111
+   }
+  },
+  "codex_gpt_5_5": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.2738,
+    "richness": 0.244,
+    "gate_fail_rate": 0.1667
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.3062,
+    "richness": 0.3023,
+    "gate_fail_rate": 0.0698
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.2767,
+    "richness": 0.32,
+    "gate_fail_rate": 0.12
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.2222,
+    "richness": 0.2611,
+    "gate_fail_rate": 0.2667
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.3492,
+    "richness": 0.2857,
+    "gate_fail_rate": 0.1429
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.3876,
+    "richness": 0.4012,
+    "gate_fail_rate": 0.0698
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.34,
+    "richness": 0.365,
+    "gate_fail_rate": 0.16
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.263,
+    "richness": 0.25,
+    "gate_fail_rate": 0.2889
+   }
+  },
+  "codex_gpt_6_astra": {
+   "easy": {
+    "n_attempts": 42,
+    "completeness": 0.5595,
+    "richness": 0.4583,
+    "gate_fail_rate": 0.1429
+   },
+   "extreme": {
+    "n_attempts": 43,
+    "completeness": 0.6434,
+    "richness": 0.5465,
+    "gate_fail_rate": 0.0465
+   },
+   "hard": {
+    "n_attempts": 50,
+    "completeness": 0.6,
+    "richness": 0.51,
+    "gate_fail_rate": 0.1
+   },
+   "medium": {
+    "n_attempts": 45,
+    "completeness": 0.4815,
+    "richness": 0.4556,
+    "gate_fail_rate": 0.2444
+   }
+  }
+ },
+ "by_category": {
+  "cc_deepseek_flash_41": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.25,
+    "richness": 0.2917,
+    "gate_fail_rate": 0.2
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.3656,
+    "richness": 0.3548,
+    "gate_fail_rate": 0.2581
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.1458,
+    "richness": 0.1146,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.1815,
+    "richness": 0.2056,
+    "gate_fail_rate": 0.1556
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.3854,
+    "richness": 0.4062,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.2941,
+    "richness": 0.4044,
+    "gate_fail_rate": 0.1176
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.25,
+    "richness": 0.2417,
+    "gate_fail_rate": 0.2
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.328,
+    "richness": 0.379,
+    "gate_fail_rate": 0.3226
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.125,
+    "richness": 0.1042,
+    "gate_fail_rate": 0.4167
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.163,
+    "richness": 0.1944,
+    "gate_fail_rate": 0.2667
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.2708,
+    "richness": 0.4844,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.2941,
+    "richness": 0.3897,
+    "gate_fail_rate": 0.1765
+   }
+  },
+  "cc_fable_5": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.4444,
+    "richness": 0.375,
+    "gate_fail_rate": 0.1333
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.4355,
+    "richness": 0.5081,
+    "gate_fail_rate": 0.2258
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.3125,
+    "richness": 0.2396,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.3333,
+    "richness": 0.3889,
+    "gate_fail_rate": 0.1778
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.375,
+    "richness": 0.4219,
+    "gate_fail_rate": 0.3125
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.4363,
+    "richness": 0.4044,
+    "gate_fail_rate": 0.1765
+   }
+  },
+  "cc_fable_5_1": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.4944,
+    "richness": 0.4167,
+    "gate_fail_rate": 0.1667
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.5538,
+    "richness": 0.4919,
+    "gate_fail_rate": 0.1613
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.3056,
+    "richness": 0.25,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.3741,
+    "richness": 0.3667,
+    "gate_fail_rate": 0.1111
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.4583,
+    "richness": 0.4844,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.5,
+    "richness": 0.4485,
+    "gate_fail_rate": 0.1471
+   }
+  },
+  "cc_glm_5_2": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.2722,
+    "richness": 0.2417,
+    "gate_fail_rate": 0.2333
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.3441,
+    "richness": 0.371,
+    "gate_fail_rate": 0.2903
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.1042,
+    "richness": 0.125,
+    "gate_fail_rate": 0.375
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.1815,
+    "richness": 0.2278,
+    "gate_fail_rate": 0.2889
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.3333,
+    "richness": 0.3906,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.2598,
+    "richness": 0.3603,
+    "gate_fail_rate": 0.1765
+   }
+  },
+  "cc_glm_5_3": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.3778,
+    "richness": 0.2833,
+    "gate_fail_rate": 0.2
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.3441,
+    "richness": 0.4435,
+    "gate_fail_rate": 0.2903
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.2014,
+    "richness": 0.2188,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.2704,
+    "richness": 0.3333,
+    "gate_fail_rate": 0.1556
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.3542,
+    "richness": 0.3594,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.3333,
+    "richness": 0.3824,
+    "gate_fail_rate": 0.1471
+   }
+  },
+  "cc_opus_5": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.3778,
+    "richness": 0.3833,
+    "gate_fail_rate": 0.1333
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.4194,
+    "richness": 0.4677,
+    "gate_fail_rate": 0.1613
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.2986,
+    "richness": 0.2292,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.337,
+    "richness": 0.4,
+    "gate_fail_rate": 0.0889
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.4167,
+    "richness": 0.5312,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.402,
+    "richness": 0.4338,
+    "gate_fail_rate": 0.1176
+   }
+  },
+  "cc_seed_evolving": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.2444,
+    "richness": 0.2333,
+    "gate_fail_rate": 0.3
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.2849,
+    "richness": 0.3468,
+    "gate_fail_rate": 0.3548
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.1667,
+    "richness": 0.1771,
+    "gate_fail_rate": 0.375
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.1519,
+    "richness": 0.1944,
+    "gate_fail_rate": 0.3556
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.2396,
+    "richness": 0.2969,
+    "gate_fail_rate": 0.3125
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.2059,
+    "richness": 0.2721,
+    "gate_fail_rate": 0.2941
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.1889,
+    "richness": 0.175,
+    "gate_fail_rate": 0.2
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.3065,
+    "richness": 0.3548,
+    "gate_fail_rate": 0.1935
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.1111,
+    "richness": 0.1875,
+    "gate_fail_rate": 0.375
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.1852,
+    "richness": 0.2167,
+    "gate_fail_rate": 0.2
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.2917,
+    "richness": 0.3906,
+    "gate_fail_rate": 0.3125
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.2696,
+    "richness": 0.375,
+    "gate_fail_rate": 0.1765
+   }
+  },
+  "codex_gpt_5_5": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.2889,
+    "richness": 0.325,
+    "gate_fail_rate": 0.1333
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.3602,
+    "richness": 0.3548,
+    "gate_fail_rate": 0.1935
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.1389,
+    "richness": 0.1042,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.2222,
+    "richness": 0.2556,
+    "gate_fail_rate": 0.0889
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.3333,
+    "richness": 0.2969,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.2941,
+    "richness": 0.3382,
+    "gate_fail_rate": 0.0588
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.3278,
+    "richness": 0.3167,
+    "gate_fail_rate": 0.1667
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.3871,
+    "richness": 0.4597,
+    "gate_fail_rate": 0.1613
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.2569,
+    "richness": 0.1771,
+    "gate_fail_rate": 0.3333
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.2556,
+    "richness": 0.2444,
+    "gate_fail_rate": 0.1111
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.4375,
+    "richness": 0.3594,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.402,
+    "richness": 0.4118,
+    "gate_fail_rate": 0.0882
+   }
+  },
+  "codex_gpt_6_astra": {
+   "Action": {
+    "n_attempts": 30,
+    "completeness": 0.5722,
+    "richness": 0.5167,
+    "gate_fail_rate": 0.1333
+   },
+   "Adventure & Puzzle": {
+    "n_attempts": 31,
+    "completeness": 0.6505,
+    "richness": 0.6048,
+    "gate_fail_rate": 0.1613
+   },
+   "RPG": {
+    "n_attempts": 24,
+    "completeness": 0.4444,
+    "richness": 0.2812,
+    "gate_fail_rate": 0.2917
+   },
+   "Simulation & Sandbox": {
+    "n_attempts": 45,
+    "completeness": 0.537,
+    "richness": 0.4611,
+    "gate_fail_rate": 0.0667
+   },
+   "Social & Tabletop": {
+    "n_attempts": 16,
+    "completeness": 0.5729,
+    "richness": 0.5156,
+    "gate_fail_rate": 0.25
+   },
+   "Strategy": {
+    "n_attempts": 34,
+    "completeness": 0.6324,
+    "richness": 0.5515,
+    "gate_fail_rate": 0.0294
+   }
+  }
+ },
+ "by_incentive": {
+  "cc_deepseek_flash_41": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.1897,
+    "richness": 0.2672,
+    "gate_fail_rate": 0.1724
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.1111,
+    "richness": 0.1111,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.2246,
+    "richness": 0.2391,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.2941,
+    "richness": 0.3172,
+    "gate_fail_rate": 0.1933
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.2012,
+    "richness": 0.2414,
+    "gate_fail_rate": 0.1724
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.0741,
+    "richness": 0.0278,
+    "gate_fail_rate": 0.5556
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.1884,
+    "richness": 0.2609,
+    "gate_fail_rate": 0.3043
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.2647,
+    "richness": 0.3193,
+    "gate_fail_rate": 0.2605
+   }
+  },
+  "cc_fable_5": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.4023,
+    "richness": 0.3017,
+    "gate_fail_rate": 0.2069
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.2778,
+    "richness": 0.3056,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.3043,
+    "richness": 0.337,
+    "gate_fail_rate": 0.3043
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.4118,
+    "richness": 0.4328,
+    "gate_fail_rate": 0.1849
+   }
+  },
+  "cc_fable_5_1": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.4425,
+    "richness": 0.3362,
+    "gate_fail_rate": 0.1724
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.3889,
+    "richness": 0.3056,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.3478,
+    "richness": 0.3587,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.472,
+    "richness": 0.4412,
+    "gate_fail_rate": 0.1513
+   }
+  },
+  "cc_glm_5_2": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.1897,
+    "richness": 0.2069,
+    "gate_fail_rate": 0.2069
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.037,
+    "richness": 0.1111,
+    "gate_fail_rate": 0.5556
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.2029,
+    "richness": 0.2283,
+    "gate_fail_rate": 0.3043
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.2787,
+    "richness": 0.3214,
+    "gate_fail_rate": 0.2521
+   }
+  },
+  "cc_glm_5_3": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.3218,
+    "richness": 0.2672,
+    "gate_fail_rate": 0.1379
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.1852,
+    "richness": 0.1111,
+    "gate_fail_rate": 0.5556
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.2174,
+    "richness": 0.2174,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.3361,
+    "richness": 0.3992,
+    "gate_fail_rate": 0.2017
+   }
+  },
+  "cc_opus_5": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.3563,
+    "richness": 0.3621,
+    "gate_fail_rate": 0.1379
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.2407,
+    "richness": 0.25,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.2826,
+    "richness": 0.3587,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.4034,
+    "richness": 0.4349,
+    "gate_fail_rate": 0.1345
+   }
+  },
+  "cc_seed_evolving": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.2069,
+    "richness": 0.2241,
+    "gate_fail_rate": 0.2414
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.037,
+    "richness": 0.0278,
+    "gate_fail_rate": 0.7778
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.1377,
+    "richness": 0.1413,
+    "gate_fail_rate": 0.3913
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.2381,
+    "richness": 0.292,
+    "gate_fail_rate": 0.3109
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.1552,
+    "richness": 0.2328,
+    "gate_fail_rate": 0.1724
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.0741,
+    "richness": 0.0556,
+    "gate_fail_rate": 0.5556
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.1522,
+    "richness": 0.1957,
+    "gate_fail_rate": 0.3043
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.2633,
+    "richness": 0.3172,
+    "gate_fail_rate": 0.2017
+   }
+  },
+  "codex_gpt_5_5": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.2529,
+    "richness": 0.25,
+    "gate_fail_rate": 0.1034
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.0926,
+    "richness": 0.1389,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.1812,
+    "richness": 0.2065,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.3039,
+    "richness": 0.3172,
+    "gate_fail_rate": 0.1345
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.2988,
+    "richness": 0.2931,
+    "gate_fail_rate": 0.1379
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.1852,
+    "richness": 0.2222,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.3043,
+    "richness": 0.2391,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.3599,
+    "richness": 0.3592,
+    "gate_fail_rate": 0.1429
+   }
+  },
+  "codex_gpt_6_astra": {
+   "competitive": {
+    "n_attempts": 29,
+    "completeness": 0.523,
+    "richness": 0.4655,
+    "gate_fail_rate": 0.1034
+   },
+   "cooperative": {
+    "n_attempts": 9,
+    "completeness": 0.4815,
+    "richness": 0.3056,
+    "gate_fail_rate": 0.3333
+   },
+   "mixed-motive": {
+    "n_attempts": 23,
+    "completeness": 0.471,
+    "richness": 0.4022,
+    "gate_fail_rate": 0.2609
+   },
+   "single-agent": {
+    "n_attempts": 119,
+    "completeness": 0.6092,
+    "richness": 0.5315,
+    "gate_fail_rate": 0.1008
+   }
+  }
+ },
+ "by_judge_batch": {
+  "cc_deepseek_flash_41": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.5167,
+    "richness": 0.575,
+    "gate_fail_rate": 0.1
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.2645,
+    "richness": 0.35,
+    "gate_fail_rate": 0.16
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.1511,
+    "richness": 0.1133,
+    "gate_fail_rate": 0.2933
+   }
+  },
+  "cc_deepseek_v4_flash": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.5444,
+    "richness": 0.5417,
+    "gate_fail_rate": 0.0667
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.2533,
+    "richness": 0.3967,
+    "gate_fail_rate": 0.1333
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.0933,
+    "richness": 0.07,
+    "gate_fail_rate": 0.48
+   }
+  },
+  "cc_fable_5": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.6167,
+    "richness": 0.625,
+    "gate_fail_rate": 0.1333
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.3978,
+    "richness": 0.4833,
+    "gate_fail_rate": 0.1733
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.2911,
+    "richness": 0.21,
+    "gate_fail_rate": 0.28
+   }
+  },
+  "cc_fable_5_1": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.6444,
+    "richness": 0.6583,
+    "gate_fail_rate": 0.1
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.4667,
+    "richness": 0.4833,
+    "gate_fail_rate": 0.1333
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.3489,
+    "richness": 0.23,
+    "gate_fail_rate": 0.2533
+   }
+  },
+  "cc_glm_5_2": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.5111,
+    "richness": 0.55,
+    "gate_fail_rate": 0.1667
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.2667,
+    "richness": 0.3567,
+    "gate_fail_rate": 0.16
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.1111,
+    "richness": 0.0967,
+    "gate_fail_rate": 0.4133
+   }
+  },
+  "cc_glm_5_3": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.5278,
+    "richness": 0.5333,
+    "gate_fail_rate": 0.1333
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.3489,
+    "richness": 0.46,
+    "gate_fail_rate": 0.1333
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.1867,
+    "richness": 0.1433,
+    "gate_fail_rate": 0.3333
+   }
+  },
+  "cc_opus_5": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.6333,
+    "richness": 0.6667,
+    "gate_fail_rate": 0.0333
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.3622,
+    "richness": 0.48,
+    "gate_fail_rate": 0.12
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.2778,
+    "richness": 0.2233,
+    "gate_fail_rate": 0.2533
+   }
+  },
+  "cc_seed_evolving": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.4444,
+    "richness": 0.425,
+    "gate_fail_rate": 0.2333
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.2178,
+    "richness": 0.3333,
+    "gate_fail_rate": 0.2267
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.1089,
+    "richness": 0.0933,
+    "gate_fail_rate": 0.48
+   }
+  },
+  "codex_deepseek_v4_pro": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.4556,
+    "richness": 0.55,
+    "gate_fail_rate": 0.1
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.2267,
+    "richness": 0.3367,
+    "gate_fail_rate": 0.16
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.1244,
+    "richness": 0.1033,
+    "gate_fail_rate": 0.3467
+   }
+  },
+  "codex_gpt_5_5": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.5278,
+    "richness": 0.4583,
+    "gate_fail_rate": 0.0333
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.2467,
+    "richness": 0.35,
+    "gate_fail_rate": 0.12
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.1889,
+    "richness": 0.1467,
+    "gate_fail_rate": 0.24
+   }
+  },
+  "codex_gpt_5_6_sol": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.55,
+    "richness": 0.5333,
+    "gate_fail_rate": 0.0333
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.3822,
+    "richness": 0.4133,
+    "gate_fail_rate": 0.12
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.2,
+    "richness": 0.1567,
+    "gate_fail_rate": 0.2667
+   }
+  },
+  "codex_gpt_6_astra": {
+   "Final-30": {
+    "n_attempts": 30,
+    "completeness": 0.7944,
+    "richness": 0.725,
+    "gate_fail_rate": 0.0
+   },
+   "Mobile-75": {
+    "n_attempts": 75,
+    "completeness": 0.6067,
+    "richness": 0.54,
+    "gate_fail_rate": 0.1067
+   },
+   "PC-75": {
+    "n_attempts": 75,
+    "completeness": 0.4467,
+    "richness": 0.3533,
+    "gate_fail_rate": 0.2133
+   }
+  }
+ }
+}

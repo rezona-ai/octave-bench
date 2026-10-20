@@ -1,0 +1,14 @@
+model_list:
+  - model_name: doubao-seed-evolving
+    litellm_params:
+      model: volcengine/doubao-seed-evolving-latest-version
+      api_base: https://ark.cn-beijing.volces.com/api/v3
+      api_key: os.environ/ARK_API_KEY
+      max_tokens: 65536
+      additional_drop_params: ["user"]
+      timeout: 3000
+litellm_settings:
+  drop_params: true
+  num_retries: 1
+  request_timeout: 3000
+general_settings: {}

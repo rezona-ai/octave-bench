@@ -1,0 +1,184 @@
+{
+  "_doc": "Model registry for harness/run_bench.py. agent=claude → Claude Code CLI with ANTHROPIC_BASE_URL/ANTHROPIC_MODEL; agent=codex → Codex CLI with a custom model_provider (Responses API). key_env names the variable read from configs/keys.env (never a literal key). price = USD per 1M tokens (input, output, cache_read, cache_write); used by `run_bench.py status` and scoring/aggregate.py to recompute cost from usage. concurrency = default per-model parallelism. effort → `claude --effort` / codex model_reasoning_effort.",
+  "models": {
+    "cc_opus_5": {
+      "agent": "claude",
+      "display": "Opus 5",
+      "base_url": "https://api.anthropic.com",
+      "model": "claude-opus-5",
+      "key_env": "ANTHROPIC_API_KEY",
+      "effort": "xhigh",
+      "concurrency": 5,
+      "price": {
+        "input": 5.0,
+        "output": 25.0,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    "cc_fable_5": {
+      "agent": "claude",
+      "display": "Fable 5",
+      "base_url": "https://api.anthropic.com",
+      "model": "claude-fable-5",
+      "key_env": "ANTHROPIC_API_KEY",
+      "effort": "xhigh",
+      "concurrency": 5,
+      "price": {
+        "input": 10.0,
+        "output": 50.0,
+        "cache_read": 1.0,
+        "cache_write": 12.5
+      }
+    },
+    "cc_fable_5_1": {
+      "agent": "claude",
+      "display": "Fable 5.1 xhigh",
+      "base_url": "https://api.anthropic.com",
+      "model": "claude-fable-5-1",
+      "key_env": "ANTHROPIC_API_KEY",
+      "effort": "xhigh",
+      "concurrency": 5,
+      "price": {
+        "input": 10.0,
+        "output": 50.0,
+        "cache_read": 1.0,
+        "cache_write": 12.5
+      },
+      "note": "Price assumed equal to Fable 5."
+    },
+    "codex_gpt_5_5": {
+      "agent": "codex",
+      "display": "GPT-5.5",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-5.5",
+      "key_env": "OPENAI_API_KEY",
+      "wire_api": "responses",
+      "effort": "high",
+      "concurrency": 5,
+      "price": {
+        "input": 5.0,
+        "output": 30.0,
+        "cache_read": 0.5,
+        "cache_write": 0.0
+      },
+      "note": "OpenAI pricing as of 2026-09-08; no cache-write fee."
+    },
+    "codex_gpt_5_6_sol": {
+      "agent": "codex",
+      "display": "GPT-5.6-sol",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-5.6-sol",
+      "key_env": "OPENAI_API_KEY",
+      "wire_api": "responses",
+      "effort": "high",
+      "concurrency": 5,
+      "price": {
+        "input": 4.0,
+        "output": 20.0,
+        "cache_read": 0.4,
+        "cache_write": 0.0
+      },
+      "note": "OpenAI pricing as of 2026-09-08; no cache-write fee."
+    },
+    "codex_gpt_6_astra": {
+      "agent": "codex",
+      "display": "GPT-6 Astra",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-6-astra",
+      "key_env": "OPENAI_API_KEY",
+      "wire_api": "responses",
+      "effort": "high",
+      "concurrency": 5,
+      "price": {
+        "input": 10.0,
+        "output": 50.0,
+        "cache_read": 1.0,
+        "cache_write": 0.0
+      },
+      "note": "OpenAI pricing as of 2026-09-08; no cache-write fee."
+    },
+    "codex_deepseek_v4_pro": {
+      "agent": "codex",
+      "display": "DeepSeek-V4-Pro",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-v4-pro",
+      "key_env": "DEEPSEEK_API_KEY",
+      "wire_api": "responses",
+      "effort": "high",
+      "concurrency": 4,
+      "price": {
+        "input": 1.2587,
+        "output": 3.7762,
+        "cache_read": 0.042,
+        "cache_write": 0.0
+      },
+      "note": "DeepSeek CN peak price (CNY 9 / 27 / cache 0.3 per 1M) at 7.15 CNY/USD; off-peak is half."
+    },
+    "cc_deepseek_v4_flash": {
+      "agent": "claude",
+      "display": "DeepSeek-V4-Flash-0731",
+      "base_url": "https://api.deepseek.com/anthropic",
+      "model": "deepseek-v4-flash",
+      "key_env": "DEEPSEEK_API_KEY",
+      "concurrency": 4,
+      "price": {
+        "input": 0.4196,
+        "output": 1.2587,
+        "cache_read": 0.014,
+        "cache_write": 0.0
+      },
+      "note": "DeepSeek CN peak price (CNY 3 / 9 / cache 0.1 per 1M) at 7.15 CNY/USD; off-peak is half. Endpoint later retired."
+    },
+    "cc_deepseek_flash_41": {
+      "agent": "claude",
+      "display": "DeepSeek-V4.1-Flash",
+      "base_url": "https://api.deepseek.com/anthropic",
+      "model": "deepseek-flash",
+      "key_env": "DEEPSEEK_API_KEY",
+      "concurrency": 10,
+      "price": {
+        "input": 0.4196,
+        "output": 1.2587,
+        "cache_read": 0.014,
+        "cache_write": 0.0
+      },
+      "note": "DeepSeek 4.1 Flash, API id deepseek-flash. Priced as V4-Flash."
+    },
+    "cc_glm_5_2": {
+      "agent": "claude",
+      "display": "GLM-5.2",
+      "base_url": "https://open.bigmodel.cn/api/anthropic",
+      "model": "glm-5.2",
+      "key_env": "ZHIPU_API_KEY",
+      "concurrency": 5,
+      "price": null,
+      "note": "No official unit price captured; cost is not computed."
+    },
+    "cc_glm_5_3": {
+      "agent": "claude",
+      "display": "GLM-5.3",
+      "base_url": "https://open.bigmodel.cn/api/anthropic",
+      "model": "glm-5.3",
+      "key_env": "ZHIPU_API_KEY",
+      "concurrency": 5,
+      "price": null,
+      "note": "No official unit price captured; cost is not computed."
+    },
+    "cc_seed_evolving": {
+      "agent": "claude",
+      "display": "Seed Evolving V4",
+      "base_url": "http://127.0.0.1:4000",
+      "model": "doubao-seed-evolving",
+      "key_env": "ARK_API_KEY",
+      "concurrency": 5,
+      "price": {
+        "input": 0.839,
+        "output": 4.196,
+        "cache_read": 0.0,
+        "cache_write": 0.0
+      },
+      "note": "Claude Code talks to a local LiteLLM proxy (configs/litellm_seed.yaml, harness/scripts/start_litellm.sh) that forwards to Volcengine Ark (upstream model doubao-seed-evolving-latest-version). Price CNY 6 / 30 per 1M at 7.15 CNY/USD."
+    }
+  }
+}
