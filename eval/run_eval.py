@@ -4,8 +4,8 @@
 Input : a runs directory laid out as <runs>/<model_key>/<task_id>/project/ (what run_bench.py
         writes), plus the case file that produced it (.jsonl or a .json list).
 Judge : llm-eval/{2D,3D}_eval.py (web) or {2D,3D}_mobile_eval.py (mobile), picked per case from its
-        `render` and `platform` fields (--mobile forces the mobile rubrics). The judge scores the 6 public
-        checklist items and, separately, the 4 hidden probes: in the same call (--hidden-mode inline, as
+        `render` and `platform` fields (--mobile forces the mobile rubrics). The judge scores the 6
+        completeness_requirements and, separately, the 4 richness_requirements: in the same call (--hidden-mode inline, as
         for Mobile-75 / Final-30 in v1) or in a second call (--hidden-mode separate, as for PC-75).
 Output: eval_results/<model_key>/<task_id>.json (judge verdict + meta) and
         eval_results/<model_key>.csv (one row per case: gate, public/hidden passed, aux dims).
@@ -45,6 +45,12 @@ def load_cases(path: str) -> list[dict]:
     d = json.loads(text)
     return d if isinstance(d, list) else d["cases"]
 
+def requirements(case: dict, hidden: bool = False) -> list[str]:
+    """Completeness (public) or Richness (hidden) requirements; accepts the pre-release field names too."""
+    if hidden:
+        return case.get("richness_requirements", case.get("hidden_checklist", []))
+    return case.get("completeness_requirements", case.get("checklist", []))
+
 def pick_judge(case: dict, mobile: bool):
     if mobile or case.get("platform") == "mobile":
         return (_load("3D_mobile_eval").Eval3DMobileScenario if is_3d(case) else _load("2D_mobile_eval").Eval2DMobileScenario)()
@@ -72,14 +78,14 @@ def eval_one(model: str, case: dict, runs: Path, out_dir: Path, mobile: bool, fo
     harness_status = json.loads(meta_p.read_text()).get("status") if meta_p.exists() else None
     rec = {"model_key": model, "task_id": tid, "harness_status": harness_status,
            "judge": "mobile" if mobile or case.get("platform") == "mobile" else "web",
-           "render": "3D" if is_3d(case) else "2D", "checklist_n": len(case.get("checklist", []))}
+           "render": "3D" if is_3d(case) else "2D", "checklist_n": len(requirements(case))}
     src_files = [p for p in proj.rglob("*") if p.is_file() and "node_modules" not in p.parts and "dist" not in p.parts] if proj.exists() else []
     if not src_files:
         rec.update(status="no_project", passed=0, total=rec["checklist_n"], verdict=None)
     else:
         try:
-            hidden = case.get("hidden_checklist", [])
-            base_info = {"prompt": case["prompt"], "checklist": case["checklist"],
+            hidden = requirements(case, hidden=True)
+            base_info = {"prompt": case["prompt"], "checklist": requirements(case),
                          "hidden_checklist": hidden if hidden_mode == "inline" else [], "attachment": case.get("attachment", [])}
             judge = pick_judge(case, mobile)
             v = judge.eval(base_info, str(proj))

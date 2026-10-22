@@ -91,15 +91,14 @@ One JSON object per line. Abridged:
   "task_id": "hard_action_rpg_3d_017",
   "track": "main", "platform": "web", "render": "3d", "category": "RPG", "level": "extreme",
   "prompt": "[Game] AI-Directed Dynamic Dungeon: an invisible director adjusts pressure ...",
-  "checklist": ["Branch from the same seed ... the efficient branch actually encounters more enemies ...", "..."],
-  "hidden_checklist": ["From the same initial combat state, compare leaving the healer alive with killing it ...", "..."],
-  "checklist_capabilities": [["C5", "C2"], ...],
+  "completeness_requirements": ["Branch from the same seed ... the efficient branch actually encounters more enemies ...", "..."],
+  "richness_requirements": ["From the same initial combat state, compare leaving the healer alive with killing it ...", "..."],
+  "completeness_requirement_capabilities": [["C5", "C2"], ...],
   "agent_ability": ["C1", "C2", "C3", "C5"]
 }
 ```
 
-`checklist` holds the Completeness requirements and `hidden_checklist` the Richness requirements. The first code
-in each `*_capabilities` entry is the requirement's primary capability. See the [dataset card](data/README.md) for
+The first code in each `*_requirement_capabilities` entry is the requirement's primary capability. See the [dataset card](data/README.md) for
 every field, the capability codes, and how difficulty levels were assigned.
 
 ## Secrets

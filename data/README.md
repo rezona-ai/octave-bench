@@ -48,9 +48,9 @@ cases = [json.loads(l) for l in open("data/octave_180_en.jsonl")]
 | `desc` | str | One-line title |
 | `prompt` | str | The design brief given to the agent: game, core mechanics, must-haves, creative freedom |
 | `agent_ability` | list[str] | Capabilities (C1–C8) the case exercises: the union of its items' capabilities |
-| `checklist` | list[str] (6) | Completeness requirements: public, concrete, falsifiable behaviours stated by the brief. The ranking metric is the share passed |
-| `hidden_checklist` | list[str] (4) | Richness requirements: hidden behaviours (deeper relationships, edge cases, cross-system coupling) a complete implementation implies but the prompt does not spell out. Reported as a separate metric |
-| `checklist_capabilities` / `hidden_checklist_capabilities` | list[list[str]] | Capabilities per requirement, aligned by index. The **first code is the primary capability**, used for the per-capability scores |
+| `completeness_requirements` | list[str] (6) | Completeness requirements: public, concrete, falsifiable behaviours stated by the brief. The ranking metric is the share passed |
+| `richness_requirements` | list[str] (4) | Richness requirements: hidden behaviours (deeper relationships, edge cases, cross-system coupling) a complete implementation implies but the prompt does not spell out. Reported as a separate metric |
+| `completeness_requirement_capabilities` / `richness_requirement_capabilities` | list[list[str]] | Capabilities per requirement, aligned by index. The **first code is the primary capability**, used for the per-capability scores |
 | `repro_meta` | object | `repro` cases only: `repro_game` (title / developer / store id / date), `src_video` (reference video, may be empty), `difficulty_tier`, `evidence` (claim, source, grade), `minimal_state_surface`, `checklist_detail` (layer and category of each of the 10 items) |
 | `canary` | str | Contamination canary |
 

@@ -37,8 +37,8 @@ Over all attempts: Completeness 32.2%, Richness 33.5%, gate flags 21.0%.
 level, completeness_passed, completeness_total, completeness, richness_passed, richness_total, richness, gate_flag,
 artifact_present, aux_levels, aux_juice`
 
-`item_scores.csv.gz`: `model, task_id, kind (completeness|richness), item_index (0-based position in checklist /
-hidden_checklist), passed (0|1), primary_capability, capabilities (C-codes, "|"-separated, primary first), reason`
+`item_scores.csv.gz`: `model, task_id, kind (completeness|richness), item_index (0-based position in completeness_requirements /
+richness_requirements), passed (0|1), primary_capability, capabilities (C-codes, "|"-separated, primary first), reason`
 
 `generation.csv`: `model, task_id, judge_batch, gen_status (success|timeout|no_dist|no_project|agent_error|refusal),
 wall_min, in_tok, out_tok, cache_read_tok, cache_write_tok, cost_usd, turns`
