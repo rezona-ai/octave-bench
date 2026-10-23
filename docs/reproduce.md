@@ -95,10 +95,8 @@ python3 scoring/aggregate.py --status $BENCH_HOME/status.csv --eval-dir eval_res
 
 ### The v1 judge
 
-All v1 results were judged by **gpt-6-astra** with the rubrics in `llm-eval/` exactly as committed, invoked
-primarily through the Responses API. Within the PC-75 batch, 15 judgment reasons for `cc_deepseek_flash_41` (4
-Completeness, 11 Richness) were produced through Codex CLI with effort `low` (paper Appendix E.2). The default
-backend here (`EVAL_JUDGE_PROVIDER=openai`, `utils/openai_judge.py`) sends the rubric prompt with these settings:
+All v1 results were judged by **gpt-6-astra** with the rubrics in `llm-eval/` exactly as committed (invocation details:
+paper Appendix E.2). The default backend here (`EVAL_JUDGE_PROVIDER=openai`, `utils/openai_judge.py`) sends the rubric prompt with these settings:
 
 | Setting | Value |
 |---|---|

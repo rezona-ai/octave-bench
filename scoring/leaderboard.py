@@ -12,8 +12,6 @@ Metrics (per model; every attempt counts, tasks weighted equally):
   richness        share of the 4 hidden (Richness) requirements passed
   gate_fail_rate  share of attempts flagged by the judge's runnability gate or with no artifact
   C1..C8          pass rate over all 10 requirements, grouped by each requirement's primary capability
-breakdowns.json also holds the capability scores split by requirement type (Figure 4 of the paper) and pass rates by
-requirement difficulty (Easy / Medium / Hard / Extreme, four equal strata of 450 requirements; Table G.1).
 Gate flags are diagnostic: flagged attempts keep their raw judgments, and missing artifacts score zero.
 """
 from __future__ import annotations
