@@ -95,12 +95,14 @@ python3 scoring/aggregate.py --status $BENCH_HOME/status.csv --eval-dir eval_res
 
 ### The v1 judge
 
-All v1 results were judged by **gpt-6-astra** with the rubrics in `llm-eval/` exactly as committed. The default
-backend (`EVAL_JUDGE_PROVIDER=openai`, `utils/openai_judge.py`) reproduces the call:
+All v1 results were judged by **gpt-6-astra** with the rubrics in `llm-eval/` exactly as committed, invoked
+primarily through the Responses API. Within the PC-75 batch, 15 judgment reasons for `cc_deepseek_flash_41` (4
+Completeness, 11 Richness) were produced through Codex CLI with effort `low` (paper Appendix E.2). The default
+backend here (`EVAL_JUDGE_PROVIDER=openai`, `utils/openai_judge.py`) sends the rubric prompt with these settings:
 
 | Setting | Value |
 |---|---|
-| API | Chat Completions (not the Responses API), OpenAI or Azure OpenAI (`EVAL_JUDGE_PROVIDER=azure`) |
+| Endpoint | OpenAI or Azure OpenAI (`EVAL_JUDGE_PROVIDER=azure`), Chat Completions |
 | Model | `gpt-6-astra` (on Azure, a deployment of that name; the body then carries no `model` field) |
 | `max_completion_tokens` | 16000 (the model rejects `max_tokens`) |
 | `temperature`, `reasoning_effort` | not set (server defaults) |

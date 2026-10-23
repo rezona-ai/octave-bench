@@ -29,8 +29,8 @@ All 2,160 attempts (12 model–harness pairs × 180 tasks, one attempt each), ra
 
 | # | Model | Harness | Completeness % | Richness % | Gate flag % |
 |---|---|---|---|---|---|
-| 1 | GPT-6 Astra † | Codex CLI | **57.1** | 49.3 | 13.3 |
-| 2 | Fable 5.1 xhigh | Claude Code | **44.7** | 40.7 | 17.8 |
+| 1 | GPT-6-astra † | Codex CLI | **57.1** | 49.3 | 13.3 |
+| 2 | Fable 5.1 | Claude Code | **44.7** | 40.7 | 17.8 |
 | 3 | Fable 5 | Claude Code | **39.0** | 39.3 | 21.1 |
 | 4 | Opus 5 | Claude Code | **37.2** | 40.4 | 16.1 |
 | 5 | GPT-5.6-sol | Codex CLI | **33.4** | 32.6 | 16.7 |
@@ -40,15 +40,17 @@ All 2,160 attempts (12 model–harness pairs × 180 tasks, one attempt each), ra
 | 9 | GLM-5.2 | Claude Code | **24.3** | 28.1 | 26.7 |
 | 10 | DeepSeek-V4-Flash-0731 | Claude Code | **23.5** | 28.5 | 26.7 |
 | 11 | DeepSeek-V4-Pro | Codex CLI | **22.2** | 27.5 | 22.8 |
-| 12 | Seed Evolving V4 | Claude Code | **21.0** | 24.9 | 33.3 |
+| 12 | Seed evolving | Claude Code | **21.0** | 24.9 | 33.3 |
 
 † The evaluator is the same model. Over all attempts, Completeness is 32.2% and Richness 33.5%; 21.0% of attempts
 are gate-flagged or have no artifact. Fixed-sample descriptive results, no confidence intervals.
 
-* **Strict judge.** Its absolute pass rates are about 30 points below human play-testers, but the model ranking
-  agrees closely with theirs (Spearman ρ = 0.95, see [`docs/human_eval.md`](docs/human_eval.md)).
-* Per-capability scores (C1–C8) and slices by track, platform, 2D/3D, difficulty and category are in
-  [`results/`](results/README.md).
+* **Strict judge.** In a human cross-check on 266 judgeable requirements, humans judged 76.3% satisfied while the
+  judge passed 46.2%; almost all disagreements are requirements humans accepted and the judge failed (see
+  [`docs/human_eval.md`](docs/human_eval.md)).
+* Per-capability scores (C1–C8) and slices by track, platform, 2D/3D, requirement difficulty and category are in
+  [`results/`](results/README.md). `python3 scoring/paper_numbers.py` recomputes the paper's tables and figures from
+  the released files and checks each number.
 
 ## Quick start
 
@@ -59,8 +61,9 @@ pip install -r requirements.txt
 # 1. Look at the tasks
 python3 -c "import json; c=[json.loads(l) for l in open('data/octave_180_en.jsonl')]; print(len(c), c[0]['prompt'][:300])"
 
-# 2. Rebuild the leaderboard from the released judge results (no API key needed)
+# 2. Rebuild the leaderboard from the released judge results, and check every number in the paper (no API key needed)
 python3 scoring/leaderboard.py
+python3 scoring/paper_numbers.py
 
 # 3. Generate games for a few tasks with one agent, then judge them (needs API keys; see docs/reproduce.md)
 python3 harness/run_bench.py run --models cc_opus_5 --cases data/octave_180_zh.jsonl --limit 3
@@ -75,7 +78,7 @@ results/      leaderboard, per-attempt and per-requirement judge results, genera
 harness/      run_bench.py — runs Claude Code / Codex CLI over the tasks, one isolated process per (model, task) · scripts/
 llm-eval/     judge rubrics: {2D,3D}_eval.py (web), {2D,3D}_mobile_eval.py (mobile)
 eval/         run_eval.py — batch judge over a runs directory
-scoring/      leaderboard.py (rebuild results/) · aggregate.py (score your own runs)
+scoring/      leaderboard.py (rebuild results/) · paper_numbers.py (check the paper's numbers) · aggregate.py (score your own runs)
 playground/   build_play.py — static "click to play" index over generated games
 utils/        judge plumbing: template filling, verdict validation, source collection, judge API (gpt-6-astra / Claude)
 configs/      model registry and prices, prompt templates, LiteLLM proxy config, keys.env.example
@@ -93,8 +96,9 @@ One JSON object per line. Abridged:
   "prompt": "[Game] AI-Directed Dynamic Dungeon: an invisible director adjusts pressure ...",
   "completeness_requirements": ["Branch from the same seed ... the efficient branch actually encounters more enemies ...", "..."],
   "richness_requirements": ["From the same initial combat state, compare leaving the healer alive with killing it ...", "..."],
+  "agent_ability": ["C1", "C2", "C3", "C5"],
   "completeness_requirement_capabilities": [["C5", "C2"], ...],
-  "agent_ability": ["C1", "C2", "C3", "C5"]
+  "completeness_requirement_difficulty": ["hard", ...]
 }
 ```
 

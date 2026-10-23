@@ -8,7 +8,7 @@
  "leaderboard": [
   {
    "model": "codex_gpt_6_astra",
-   "model_name": "GPT-6 Astra",
+   "model_name": "GPT-6-astra",
    "n_attempts": 180,
    "completeness": 0.5713,
    "richness": 0.4931,
@@ -25,7 +25,7 @@
   },
   {
    "model": "cc_fable_5_1",
-   "model_name": "Fable 5.1 xhigh",
+   "model_name": "Fable 5.1",
    "n_attempts": 180,
    "completeness": 0.4472,
    "richness": 0.4069,
@@ -195,7 +195,7 @@
   },
   {
    "model": "cc_seed_evolving",
-   "model_name": "Seed Evolving V4",
+   "model_name": "Seed evolving",
    "n_attempts": 180,
    "completeness": 0.2102,
    "richness": 0.2486,
@@ -211,6 +211,70 @@
    "rank": 12
   }
  ],
+ "capability_overall": {
+  "C1": {
+   "completeness": 0.3726,
+   "richness": 0.3747,
+   "all": 0.3736
+  },
+  "C2": {
+   "completeness": 0.2534,
+   "richness": 0.2998,
+   "all": 0.2738
+  },
+  "C3": {
+   "completeness": 0.3763,
+   "richness": 0.3738,
+   "all": 0.3753
+  },
+  "C4": {
+   "completeness": 0.3133,
+   "richness": 0.2852,
+   "all": 0.3043
+  },
+  "C5": {
+   "completeness": 0.317,
+   "richness": 0.3333,
+   "all": 0.322
+  },
+  "C6": {
+   "completeness": 0.3151,
+   "richness": 0.3064,
+   "all": 0.312
+  },
+  "C7": {
+   "completeness": 0.2515,
+   "richness": 0.293,
+   "all": 0.2667
+  },
+  "C8": {
+   "completeness": 0.3232,
+   "richness": 0.3487,
+   "all": 0.3367
+  }
+ },
+ "difficulty_overall": {
+  "easy": {
+   "completeness": 0.3774,
+   "richness": 0.419,
+   "all": 0.3969
+  },
+  "medium": {
+   "completeness": 0.3173,
+   "richness": 0.3308,
+   "all": 0.3233
+  },
+  "hard": {
+   "completeness": 0.3086,
+   "richness": 0.2988,
+   "all": 0.3046
+  },
+  "extreme": {
+   "completeness": 0.2957,
+   "richness": 0.2578,
+   "all": 0.2848
+  }
+ },
  "capabilities": {
   "C1": "Core Rules",
   "C2": "AI / NPC",

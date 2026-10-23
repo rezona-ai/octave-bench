@@ -1,7 +1,7 @@
 """Thin wrapper for invoking LLMs in eval pipelines.
 
 `invoke()` routes on EVAL_JUDGE_PROVIDER:
-    openai (default)  gpt-6-astra via Chat Completions, the v1 paper judge (utils/openai_judge.py)
+    openai (default)  gpt-6-astra, the v1 paper judge (utils/openai_judge.py)
     azure             the same model on Azure OpenAI
     anthropic         Claude via the Anthropic SDK (invoke_claude below), or `claude -p`
                       with EVAL_ALLOW_CC_FALLBACK=1

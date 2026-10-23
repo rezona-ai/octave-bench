@@ -1,61 +1,39 @@
-# Human evaluation vs. the LLM judge
+# Human cross-check of the automated evaluator
 
-We checked the primary judge (`gpt-6-astra`, static code reading) against human play-testing. This page gives
-aggregate results only. Per-item annotations are not released.
+We compared the automated evaluator (`gpt-6-astra`, static source-code review) with human play-testing on the same
+requirements (paper Section 4.4 and Appendix F). This page gives aggregate results only. Per-item human labels are
+not released.
 
-## Setup
+## Sample
 
-* **Human raters** played each generated game in a browser and marked every requirement as pass, fail, or
-  "cannot judge". Each game was rated by one rater, so there is no inter-rater agreement figure.
-* **Strictly comparable sample**: we kept only items where the human and the judge saw the same case, platform,
-  model and requirement wording. That leaves 8 Mobile-75 cases × 11 models (75 games) and 344 items, 266 of them
-  decided by the human (78 marked "cannot judge", 23%).
-* Agreement is measured on those 266 items.
+* **8 Mobile player tasks, 75 generated artifacts, 344 requirements**, aligned one by one with the final evaluator
+  judgments. Matching uses task, platform, model, artifact and requirement text. Records with a different
+  requirement-list version or artifact mapping are excluded.
+* Humans marked each requirement "satisfied", "not satisfied" or "indeterminate". 78 of the 344 are indeterminate
+  (22.7%), which leaves **266 judgeable records**. Of the 204 public (Completeness) requirements, 39 are
+  indeterminate (19.1%); of the 140 hidden (Richness) requirements, 39 are indeterminate (27.9%).
+* Judgments for artifacts that failed the static gate are kept.
+* Each artifact was assessed by one human annotator. The quality-control field is not a second independent
+  annotation, so Cohen's κ and Krippendorff's α are not computed.
 
-## Item-level agreement
+## Results (paper Table 5)
 
-| Subset | Items | Human pass | Judge pass | Agreement | Cohen's κ |
-|---|---|---|---|---|---|
-| All items | 266 | 76.3% | 46.2% | 61.7% | 0.26 |
-| Completeness requirements | 165 | 84.8% | 46.1% | 56.4% | 0.17 |
-| Richness requirements | 101 | 62.4% | 46.5% | 70.3% | 0.42 |
-| Excluding gate-flagged games | 255 | 78.8% | 48.2% | 60.8% | 0.23 |
+| Human / evaluator | Fail (0) | Pass (1) |
+|---|---|---|
+| Satisfied | 91 | 112 |
+| Not satisfied | 52 | 11 |
 
-Disagreements almost all go one way: in 91 items the human passed what the judge failed, and in only 11 items the
-judge passed what the human failed. Just 2 of those 91 come from a whole game being zeroed by the runnability gate.
-On a looser sample that also includes items whose wording was later revised (368 decided items), κ = 0.21.
+* Human–evaluator agreement: 164 / 266 = **61.7%**.
+* Human satisfaction rate: 203 / 266 = **76.3%**. Evaluator pass rate: 123 / 266 = **46.2%**.
+* Disagreement goes mainly one way: 91 requirements were judged satisfied by humans but failed by the evaluator,
+  and 11 were judged not satisfied by humans but passed by the evaluator.
 
-## Model-level agreement
-
-The ranking matters more for a benchmark than the absolute pass rate. Below are the 9 models with at least 20 decided
-items:
-
-| Model | Decided items | Human pass | Judge pass |
-|---|---|---|---|
-| GPT-6 Astra | 34 | 94.1% | 61.8% |
-| Opus 5 | 31 | 90.3% | 58.1% |
-| Fable 5.1 xhigh | 33 | 84.8% | 60.6% |
-| GPT-5.6-sol | 24 | 83.3% | 50.0% |
-| DeepSeek-V4.1-Flash | 22 | 81.8% | 40.9% |
-| GPT-5.5 | 25 | 80.0% | 48.0% |
-| Seed Evolving V4 | 25 | 80.0% | 40.0% |
-| GLM-5.3 | 33 | 57.6% | 33.3% |
-| Fable 5 | 28 | 42.9% | 32.1% |
-
-Spearman ρ between the human and judge per-model pass rates is **0.95**.
-
-## Takeaways
-
-* **Strict but order-preserving.** The judge's absolute pass rates are about 30 percentage points below the human
-  ones, but it ranks models almost the same way. Read leaderboard numbers as relative, not as "share of features
-  that work for a player".
-* **Same-model evaluation.** The judge and the top-ranked model are the same model. Human raters also put
-  GPT-6 Astra first (94.1% on the comparable items above), which is independent evidence that its rank is not just a
-  judge artifact.
+The static source-code review is therefore stricter than human observation. The human assessment is used to find
+where automated judgments and actual play diverge; it is not used in any score.
 
 ## Limitations
 
-* Coverage is narrow: 8 cases, all from Mobile-75.
-* Gate-flag rate in the human sample (about 2%) is much lower than in the full results (about 20%), so "humans
-  are more lenient" should not be extrapolated to gate-flagged games.
-* Every game was rated once, so there is no inter-rater agreement estimate.
+* The sample is small and covers only Mobile player tasks.
+* One annotator per artifact, so there is no inter-annotator agreement.
+* The returned records do not preserve play-testing duration per artifact, dual ratings or full recordings, and do
+  not record whether machine scores or source code were visible during reassessment (paper Appendix F.1).

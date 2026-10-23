@@ -20,8 +20,8 @@
 
 | # | 模型 | Harness | Completeness % | Richness % | 门槛标记 % |
 |---|---|---|---|---|---|
-| 1 | GPT-6 Astra † | Codex CLI | **57.1** | 49.3 | 13.3 |
-| 2 | Fable 5.1 xhigh | Claude Code | **44.7** | 40.7 | 17.8 |
+| 1 | GPT-6-astra † | Codex CLI | **57.1** | 49.3 | 13.3 |
+| 2 | Fable 5.1 | Claude Code | **44.7** | 40.7 | 17.8 |
 | 3 | Fable 5 | Claude Code | **39.0** | 39.3 | 21.1 |
 | 4 | Opus 5 | Claude Code | **37.2** | 40.4 | 16.1 |
 | 5 | GPT-5.6-sol | Codex CLI | **33.4** | 32.6 | 16.7 |
@@ -31,12 +31,12 @@
 | 9 | GLM-5.2 | Claude Code | **24.3** | 28.1 | 26.7 |
 | 10 | DeepSeek-V4-Flash-0731 | Claude Code | **23.5** | 28.5 | 26.7 |
 | 11 | DeepSeek-V4-Pro | Codex CLI | **22.2** | 27.5 | 22.8 |
-| 12 | Seed Evolving V4 | Claude Code | **21.0** | 24.9 | 33.3 |
+| 12 | Seed evolving | Claude Code | **21.0** | 24.9 | 33.3 |
 
 † 判官与被测模型是同一个模型。全部尝试上，Completeness 为 32.2%，Richness 为 33.5%；21.0% 的尝试被门槛标记或没有产物。结果为固定样本的描述性统计，不含置信区间。
 
-- **判官偏严**：它给出的绝对通过率比人工试玩低约 30 个百分点，但模型排名和人工高度一致（Spearman ρ = 0.95，见 [`docs/human_eval.md`](docs/human_eval.md)）。
-- 各能力维度（C1–C8）的分数，以及按赛道、平台、2D/3D、难度、类别的切片结果，见 [`results/`](results/README.md)。
+- **判官偏严**：在 266 条可判定要求的人工交叉核验中，人工判定满足的比例为 76.3%，判官通过率为 46.2%；分歧几乎都是人工认为满足、判官判为不通过（见 [`docs/human_eval.md`](docs/human_eval.md)）。
+- 各能力维度（C1–C8）的分数，以及按赛道、平台、2D/3D、要求难度、类别的切片结果，见 [`results/`](results/README.md)。`python3 scoring/paper_numbers.py` 用公开文件复算论文中的各项表格与图中数字，并逐项核对。
 
 ## 快速开始
 
@@ -47,8 +47,9 @@ pip install -r requirements.txt
 # 1. 查看题目
 python3 -c "import json; c=[json.loads(l) for l in open('data/octave_180_zh.jsonl')]; print(len(c), c[0]['prompt'][:200])"
 
-# 2. 用公开的判分结果复算排行榜（不需要 API key）
+# 2. 用公开的判分结果复算排行榜，并核对论文中的每个数字（不需要 API key）
 python3 scoring/leaderboard.py
+python3 scoring/paper_numbers.py
 
 # 3. 用一个 agent 生成几道题，再判分（需要 API key，见 docs/reproduce.md）
 python3 harness/run_bench.py run --models cc_opus_5 --cases data/octave_180_zh.jsonl --limit 3

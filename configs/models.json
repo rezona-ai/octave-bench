@@ -33,7 +33,7 @@
     },
     "cc_fable_5_1": {
       "agent": "claude",
-      "display": "Fable 5.1 xhigh",
+      "display": "Fable 5.1",
       "base_url": "https://api.anthropic.com",
       "model": "claude-fable-5-1",
       "key_env": "ANTHROPIC_API_KEY",
@@ -83,7 +83,7 @@
     },
     "codex_gpt_6_astra": {
       "agent": "codex",
-      "display": "GPT-6 Astra",
+      "display": "GPT-6-astra",
       "base_url": "https://api.openai.com/v1",
       "model": "gpt-6-astra",
       "key_env": "OPENAI_API_KEY",
@@ -167,7 +167,7 @@
     },
     "cc_seed_evolving": {
       "agent": "claude",
-      "display": "Seed Evolving V4",
+      "display": "Seed evolving",
       "base_url": "http://127.0.0.1:4000",
       "model": "doubao-seed-evolving",
       "key_env": "ARK_API_KEY",

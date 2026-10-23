@@ -1,11 +1,11 @@
-"""OpenAI / Azure OpenAI judge backend (the v1 paper judge: gpt-6-astra).
+"""OpenAI / Azure OpenAI judge backend for gpt-6-astra, the v1 paper judge.
 
 Same call shape as `utils.llm_invoke.invoke_claude`, so the judge chain
 (`static_eval` → `eval_json.invoke_json_with_retry`) can use it unchanged:
 `invoke_openai(user_prompt=..., thinking=...) -> LLMResponse`.
 
-Settings used for the v1 results:
-    API                    Chat Completions (not the Responses API)
+Request settings (see docs/reproduce.md#the-v1-judge):
+    endpoint               Chat Completions
     model                  "gpt-6-astra" (on Azure: a deployment of that name)
     max_completion_tokens  16000
     temperature            not set (server default)

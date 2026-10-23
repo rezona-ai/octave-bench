@@ -12,6 +12,8 @@ Metrics (per model; every attempt counts, tasks weighted equally):
   richness        share of the 4 hidden (Richness) requirements passed
   gate_fail_rate  share of attempts flagged by the judge's runnability gate or with no artifact
   C1..C8          pass rate over all 10 requirements, grouped by each requirement's primary capability
+breakdowns.json also holds the capability scores split by requirement type (Figure 4 of the paper) and pass rates by
+requirement difficulty (Easy / Medium / Hard / Extreme, four equal strata of 450 requirements; Table G.1).
 Gate flags are diagnostic: flagged attempts keep their raw judgments, and missing artifacts score zero.
 """
 from __future__ import annotations
@@ -44,12 +46,20 @@ def main():
     for r in cases:
         by_model[r["model"]].append(r)
 
-    cap = defaultdict(lambda: [0, 0])
+    cap, by_req = defaultdict(lambda: [0, 0]), defaultdict(lambda: [0, 0])
     with gzip.open(res / "item_scores.csv.gz", "rt", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            k = cap[(r["model"], r["primary_capability"])]
-            k[0] += int(r["passed"]); k[1] += 1
+            for key, d in [((r["model"], r["primary_capability"]), cap),
+                           (("capability", r["primary_capability"], r["kind"]), by_req),
+                           (("capability", r["primary_capability"], "all"), by_req),
+                           (("difficulty", r["difficulty"], r["kind"]), by_req),
+                           (("difficulty", r["difficulty"], "all"), by_req)]:
+                d[key][0] += int(r["passed"]); d[key][1] += 1
     caps = {m: {c: round(cap[(m, c)][0] / cap[(m, c)][1], 4) for c in CAPABILITIES if cap[(m, c)][1]} for m in by_model}
+    rate = lambda k: round(by_req[k][0] / by_req[k][1], 4) if by_req[k][1] else None
+    req_slices = {f"{dim}_overall": {g: {kind: rate((dim, g, kind)) for kind in ["completeness", "richness", "all"]}
+                                     for g in groups}
+                  for dim, groups in [("capability", CAPABILITIES), ("difficulty", ["easy", "medium", "hard", "extreme"])]}
 
     board = sorted(({"model": m, "model_name": names[m], **summarize(rs), **caps[m]} for m, rs in by_model.items()),
                    key=lambda x: -x["completeness"])
@@ -75,7 +85,7 @@ def main():
             out[m] = {g: summarize(v) for g, v in sorted(groups.items())}
         breakdowns[f"by_{dim}"] = out
     overall = summarize(cases)
-    (res / "breakdowns.json").write_text(json.dumps({"overall": overall, "leaderboard": board, **breakdowns},
+    (res / "breakdowns.json").write_text(json.dumps({"overall": overall, "leaderboard": board, **req_slices, **breakdowns},
                                                     ensure_ascii=False, indent=1))
     print("\n".join(md))
     print(f"\nAll {overall['n_attempts']} attempts: completeness {pct(overall['completeness'])}%, "
